@@ -1,1 +1,122 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d7a52">
+<title>Aaluu's 100 Days — Stronger, Happier, You</title>
+<style>
+:root{--bg:#f5faf7;--card:#fff;--text:#17231d;--muted:#718078;--green:#258456;--green2:#55b77f;--mint:#def4e7;--gold:#f4b85b;--rose:#f5dfe7;--line:#dce9e1;--shadow:0 22px 65px rgba(25,70,48,.11)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:radial-gradient(circle at 10% 5%,#e5f6ec,transparent 28%),radial-gradient(circle at 95% 0%,#fff0df,transparent 25%),var(--bg);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}button{font:inherit}
+.hero{text-align:center;padding:58px 20px 30px}.hero-inner{max-width:900px;margin:auto}.eyebrow{margin:0 0 10px;color:var(--green);font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+h1,h2{letter-spacing:-.045em}h1{font-size:clamp(3rem,8vw,6.5rem);line-height:.9;margin:0}h1 span{color:var(--green)}.subtitle{max-width:680px;margin:20px auto 28px;color:var(--muted);font-size:1.05rem;line-height:1.6}
+.progress-wrap{max-width:720px;margin:auto}.progress-top{display:flex;justify-content:space-between;color:var(--muted);font-size:.84rem;font-weight:800;margin-bottom:8px}.progress-track{height:11px;background:#dce9e1;border-radius:99px;overflow:hidden}.progress-bar{width:0;height:100%;background:linear-gradient(90deg,var(--green),var(--green2));border-radius:99px;transition:.6s}
+.container{max-width:1100px;margin:auto;padding:0 20px 80px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:15px 0 25px}.stat{background:#ffffffd9;border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:var(--shadow)}.stat small{display:block;color:var(--muted);font-weight:750}.stat strong{display:block;font-size:1.55rem;margin-top:5px}
+.card{max-width:860px;margin:0 auto 58px;background:#fffffff0;border:1px solid var(--line);border-radius:30px;padding:38px;box-shadow:var(--shadow)}.topline{display:flex;justify-content:space-between;align-items:center;gap:10px}.badge{padding:8px 14px;border-radius:99px;background:var(--mint);color:var(--green);font-size:.72rem;font-weight:900}.type{padding:8px 13px;border-radius:99px;background:#fff0dc;color:#a36322;font-size:.72rem;font-weight:900}.card h2{font-size:clamp(2.1rem,5vw,3.4rem);margin:17px 0 5px}.theme{color:var(--muted);margin:0 0 24px}.box{padding:21px;border-radius:18px;margin:13px 0}.session{background:#eef9f2}.note{background:#fafcfb;border:1px solid var(--line)}.label{display:block;color:var(--green);font-size:.68rem;font-weight:900;letter-spacing:.12em;margin-bottom:8px}.box p{margin:0;line-height:1.7}.note p{font-size:1.02rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{border:0;border-radius:12px;padding:13px 18px;font-weight:850;cursor:pointer}.complete{background:var(--text);color:white}.complete:hover{background:var(--green)}.rest{background:#fff0dc;color:#9d5b1b}.secondary{background:white;border:1px solid var(--line);color:var(--muted)}button:disabled{opacity:.48;cursor:not-allowed}.status{min-height:20px;color:var(--green);font-weight:750;font-size:.86rem}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:20px}.section-head h2{margin:0;font-size:2.35rem}.reset{border:1px solid var(--line);background:#fff;color:var(--muted);padding:9px 13px;border-radius:10px;cursor:pointer}.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:8px}.day{aspect-ratio:1;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--muted);font-weight:850;cursor:pointer}.day.current{border:2px solid var(--green);background:#eef9f2;color:var(--green)}.day.done{background:#cfeedd;color:#28764d;border-color:#abd9bd}.day.rest{background:#fff0dc;color:#a36322;border-color:#f0c98e}.day.locked{opacity:.38;cursor:not-allowed}
+.letter{max-width:860px;margin:55px auto 0;padding:32px;background:linear-gradient(135deg,#fff,#f1faf5);border:1px solid var(--line);border-radius:26px}.letter h2{margin:0 0 12px;font-size:2rem}.letter p{color:#53635b;line-height:1.75;margin:8px 0}
+.modal{position:fixed;inset:0;background:#12251cb5;display:grid;place-items:center;padding:20px;z-index:20}.hidden{display:none}.modal-card{max-width:550px;width:100%;padding:38px;background:#fff;border-radius:28px;text-align:center;box-shadow:0 30px 100px #0004}.close{float:right;border:0;background:none;font-size:28px;color:var(--muted);cursor:pointer}.trophy{font-size:3.5rem}.modal-card h2{font-size:3rem;margin:12px 0}.modal-card p{color:var(--muted);line-height:1.7}
+.heart{position:fixed;bottom:-30px;pointer-events:none;opacity:.2;animation:up linear forwards}@keyframes up{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(5,1fr)}.card{padding:25px 18px}.topline{align-items:flex-start}.section-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="hero-inner">
+<p class="eyebrow">A little gift for Aaluu ✨</p>
+<h1>100 Days<br><span>for Aaluu</span></h1>
+<p class="subtitle">A little challenge made just for you — to get stronger, feel better, take care of yourself, and remember that progress doesn't have to be perfect.</p>
+<div class="progress-wrap"><div class="progress-top"><span id="progressText">Day 1 of 100</span><span id="progressPercent">0%</span></div><div class="progress-track"><div id="bar" class="progress-bar"></div></div></div>
+</div>
+</header>
+
+<main class="container">
+<section class="stats">
+<div class="stat"><small>Days completed</small><strong id="doneStat">0 / 100</strong></div>
+<div class="stat"><small>Current streak</small><strong id="streakStat">0 days</strong></div>
+<div class="stat"><small>Workout days</small><strong id="workoutStat">0</strong></div>
+<div class="stat"><small>Recovery days</small><strong id="restStat">0</strong></div>
+</section>
+
+<section class="card">
+<div class="topline"><span class="badge" id="dayBadge">DAY 1</span><span class="type" id="typeBadge">WORKOUT</span></div>
+<p class="theme" id="theme">Foundation</p>
+<h2 id="title">A Strong Start</h2>
+<div class="box session"><span class="label">TODAY'S SESSION</span><p id="session"></p></div>
+<div class="box note"><span class="label">A LITTLE NOTE FOR AALUU 💚</span><p id="note"></p></div>
+<div class="actions"><button class="btn complete" id="complete">Complete Day ✓</button><button class="btn rest" id="rest">Take Recovery Day 🧘</button></div>
+<p class="status" id="status"></p>
+</section>
+
+<section>
+<div class="section-head"><div><p class="eyebrow">Your journey</p><h2>100-Day Calendar</h2></div><button class="reset" id="reset">Reset progress</button></div>
+<div class="grid" id="grid"></div>
+</section>
+
+<section class="letter">
+<p class="eyebrow">For Aaluu</p>
+<h2>This isn't about being perfect. ❤️</h2>
+<p>I wanted to make you something you could come back to every day — something small that reminds you to look after yourself.</p>
+<p>Some days will be workouts. Some days will be recovery. Some days you'll feel unstoppable, and some days you'll simply show up. All of those days count.</p>
+<p>So take it one day at a time. Be patient with yourself. Celebrate the tiny wins. And when Day 100 arrives, I hope you're proud of the person who kept going.</p>
+</section>
+</main>
+
+<div class="modal hidden" id="modal"><div class="modal-card"><button class="close" id="close">×</button><div class="trophy">🏆</div><p class="eyebrow">100 / 100</p><h2>You did it, Aaluu!</h2><p>100 days. You showed up, took care of yourself, and kept going. I'm so proud of you. ❤️</p><p><strong>Remember this: you were capable of this all along.</strong></p><button class="btn complete" id="keep">Keep this memory 💚</button></div></div>
+
+<script>
+const KEY="aaluu100fitness_v1";
+let state=JSON.parse(localStorage.getItem(KEY)||'{"done":[],"rest":[]}');
+let selected=Math.min(100,state.done.length+state.rest.length+1);
+const recoveryDays=[7,14,21,28,35,42,49,56,63,70,77,84,91,98];
+const workouts=[
+["Foundation","Full Body Foundation","3 rounds: 10 squats, 8 push-ups, 12 glute bridges, 20-sec plank.","Start gently. Good form matters more than speed. You don't need to destroy yourself to make progress."],
+["Strength","Lower Body Strength","3 rounds: 12 squats, 10 reverse lunges per side, 15 calf raises, 30-sec wall sit.","Strong starts with consistency. Take your time and let your body learn."],
+["Cardio","Cardio Builder","20–30 min brisk walking, cycling or an easy jog, then 5 min mobility.","Pick a pace you can sustain. Today is about building the habit."],
+["Core","Core & Stability","3 rounds: 30-sec plank, 10 dead bugs per side, 12 bird dogs per side, 15 glute bridges.","Control every movement. Your strongest work doesn't have to be the fastest."],
+["Upper Body","Upper Body Strength","3 rounds: 8–12 push-ups, 10 rows/band rows, 10 shoulder presses, 20-sec side plank each side.","Choose an easier variation whenever you need. Progress is personal."],
+["Movement","Full Body Movement","30 min of your favourite movement: walk, cycle, dance, swim or a light workout.","Move in a way that makes you feel good. Fitness should belong in your life, not take it over."],
+["Challenge","Full Body Circuit","4 rounds: 12 squats, 8 push-ups, 12 lunges, 20 mountain climbers, 30-sec plank.","You've built more than strength — you've built proof that you can keep showing up."]
+];
+function data(n){
+if(recoveryDays.includes(n))return["Recovery","Recovery Day","20–30 min easy walking + 10 min gentle mobility. Hydrate, eat well and get a good night's sleep.","Rest is not a failure or a skipped day. Recovery is part of getting stronger. Be kind to yourself today."];
+if(n===100)return["Finish Line","The 100-Day Celebration","Choose a favourite session from the last 99 days and complete 30–45 comfortable minutes. Finish with a slow cool-down.","Aaluu, this isn't about one perfect workout. It's about the 100 times you chose to show up. Today, celebrate that."];
+return workouts[(n-1)%workouts.length]
+}
+const $=x=>document.getElementById(x);
+function done(n){return state.done.includes(n)} function rest(n){return state.rest.includes(n)}
+function unlocked(){return Math.min(100,state.done.length+state.rest.length+1)}
+function save(){localStorage.setItem(KEY,JSON.stringify(state))}
+function render(n){
+selected=n;let [theme,title,session,note]=data(n);let recovery=theme==="Recovery";
+$("dayBadge").textContent="DAY "+n;$("theme").textContent=theme;$("title").textContent=title;$("session").textContent=session;$("note").textContent=note;
+$("typeBadge").textContent=recovery?"RECOVERY":"WORKOUT";$("typeBadge").style.background=recovery?"#fff0dc":"#def4e7";$("typeBadge").style.color=recovery?"#a36322":"#258456";
+$("complete").disabled=done(n)||rest(n);$("rest").disabled=done(n)||rest(n);$("complete").textContent=done(n)?"Completed ✓":"Complete Day ✓";$("rest").textContent=rest(n)?"Recovery Saved ✓":"Take Recovery Day 🧘";
+$("status").textContent=done(n)?"Aaluu did it! Another day in the books. 💚":rest(n)?"Recovery saved. Tomorrow is another chance. 🌿":n>unlocked()?"This day is locked — one day at a time.":"You've got this, Aaluu. 💪";
+stats();grid();
+}
+function stats(){
+let total=state.done.length+state.rest.length;$("bar").style.width=total+"%";$("progressText").textContent=total>=100?"100 days complete 🎉":"Day "+Math.min(100,total+1)+" of 100";$("progressPercent").textContent=total+"%";
+$("doneStat").textContent=total+" / 100";$("workoutStat").textContent=state.done.length;$("restStat").textContent=state.rest.length;
+let s=0;for(let i=1;i<=100;i++){if(done(i)||rest(i))s++;else break}$("streakStat").textContent=s+" day"+(s===1?"":"s");
+}
+function grid(){
+let u=unlocked();$("grid").innerHTML="";
+for(let n=1;n<=100;n++){let b=document.createElement("button");b.className="day";b.textContent=n;if(done(n))b.classList.add("done");if(rest(n))b.classList.add("rest");if(n===selected)b.classList.add("current");if(n>u&&!done(n)&&!rest(n))b.classList.add("locked");
+b.title=n>u&&!done(n)&&!rest(n)?"Complete the previous day first":"Open Day "+n;b.onclick=()=>{if(n<=u||done(n)||rest(n)){render(n);scrollTo({top:0,behavior:"smooth"})}};$("grid").appendChild(b)}
+}
+function finish(type){
+if(done(selected)||rest(selected)||selected>unlocked())return;
+state[type].push(selected);state[type]=[...new Set(state[type])].sort((a,b)=>a-b);save();hearts(8);
+if(selected===100)$("modal").classList.remove("hidden");else setTimeout(()=>render(selected+1),300);
+}
+$("complete").onclick=()=>finish("done");$("rest").onclick=()=>finish("rest");
+$("reset").onclick=()=>{if(confirm("Reset Aaluu's 100-day progress? This cannot be undone.")){state={done:[],rest:[]};save();render(1)}};
+function close(){ $("modal").classList.add("hidden") }$("close").onclick=close;$("keep").onclick=close;$("modal").onclick=e=>{if(e.target.id==="modal")close()};document.onkeydown=e=>{if(e.key==="Escape")close()};
+function hearts(count){let chars=["♥","♡","✦","🌿"];for(let i=0;i<count;i++){let h=document.createElement("span");h.className="heart";h.textContent=chars[Math.floor(Math.random()*chars.length)];h.style.left=Math.random()*100+"%";h.style.fontSize=12+Math.random()*20+"px";h.style.animationDuration=4+Math.random()*5+"s";document.body.appendChild(h);setTimeout(()=>h.remove(),9500)}}
+setInterval(()=>hearts(1),5000);render(selected);
+</script>
+</body>
+</html>
